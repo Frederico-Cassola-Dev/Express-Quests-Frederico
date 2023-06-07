@@ -8,7 +8,6 @@ const hashingOptions = {
 };
 
 const hashPassword = (req, res, next) => {
-  console.log("🚀 - req.body.password:", req.body.password);
   argon2
     .hash(req.body.password, hashingOptions)
     .then((hashedPassword) => {
